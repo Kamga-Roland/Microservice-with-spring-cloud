@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package fr.upec.episen.tp4.server;
+option java_package = "fr.upec.episen.tp4.server";
+
+message EvaluationRequest {
+    repeated string property_name = 1;
+}
+
+message EvaluationResponse {
+  map<string, string> properties = 1;
+}
+
+// methode retourner les évaluation des produits
+service EvaluateService {
+  rpc Evaluate(EvaluationRequest) returns (EvaluationResponse);
+}

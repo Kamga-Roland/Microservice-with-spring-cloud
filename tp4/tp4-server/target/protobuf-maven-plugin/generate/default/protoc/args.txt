@@ -1,0 +1,5 @@
+--java_out=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-server\target\generated-sources\protobuf
+C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-server\src\main\protobuf\Evaluation.proto
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-server\src\main\protobuf
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-server\target\protobuf-maven-plugin\generate\default\archives\protobuf-java-4.34.1-bac39399f3238dc777aa7d4dcbf3f87631c4437e
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-server\target\protobuf-maven-plugin\generate\default\archives\proto-google-common-protos-2.63.2-7d6d295f244a6795c4eb616778af35d4ce457196
