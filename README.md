@@ -1,1 +1,1 @@
-This project is built by Roland Kamga
+This project is built by Roland Kamga.
