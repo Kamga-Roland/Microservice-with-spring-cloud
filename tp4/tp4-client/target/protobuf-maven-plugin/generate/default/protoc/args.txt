@@ -1,0 +1,7 @@
+--java_out=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\target\generated-sources\protobuf
+--plugin=protoc-gen-0_c4d300a21d1e050f1ebd1d3e6e24cb8f833f773f=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\target\protobuf-maven-plugin\generate\default\artifacts\protoc-gen-grpc-java-0780ff19c4c34806e5fb1d1bf443e5ef63b238ea.exe
+--0_c4d300a21d1e050f1ebd1d3e6e24cb8f833f773f_out=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\target\generated-sources\protobuf
+C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\src\main\protobuf\Evaluation.proto
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\src\main\protobuf
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\target\protobuf-maven-plugin\generate\default\archives\protobuf-java-4.34.1-bac39399f3238dc777aa7d4dcbf3f87631c4437e
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp4\tp4-client\target\protobuf-maven-plugin\generate\default\archives\proto-google-common-protos-2.63.2-7d6d295f244a6795c4eb616778af35d4ce457196

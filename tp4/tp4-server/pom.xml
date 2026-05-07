@@ -14,7 +14,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <grpc.version>1.80.0</grpc.version>
         <protobuf.version>4.34.1</protobuf.version>
-        <main.class>fr.upec.episen.tp4.server.Server</main.class>
+        <main.class>fr.upec.episen.tp4.Main</main.class>
         <protobuf-java.version>4.34.1</protobuf-java.version>
     </properties>
 
@@ -120,8 +120,15 @@
                     <protoc kind="binary-maven">
                         <version>${protobuf-java.version}</version>
                     </protoc>
-                </configuration>
 
+                    <plugins>
+                        <plugin kind="binary-maven">
+                            <groupId>io.grpc</groupId>
+                            <artifactId>protoc-gen-grpc-java</artifactId>
+                            <version>${grpc.version}</version>
+                        </plugin>
+                    </plugins>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -131,19 +138,27 @@
                 </executions>
             </plugin>
 
-            <!-- Plugin pour détecter l'OS et choisir le bon protocole -->
-            <!-- <plugin>
-                <groupId>kr.motd.maven</groupId>
-                <artifactId>os-maven-plugin</artifactId>
-                <version>1.7.0</version>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.5.0</version>
                 <executions>
                     <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>detect</goal>
+                            <goal>add-source</goal>
                         </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/protobuf/java</source>
+                                <source>${project.build.directory}/generated-sources/protobuf/grpc-java</source>
+                            </sources>
+                        </configuration>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
+
 
         </plugins>
     </build>
