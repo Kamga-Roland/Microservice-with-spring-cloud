@@ -7,11 +7,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import fr.upec.episen.tp5_server.ProductServiceGrpc.ProductServiceBlockingStub;
-import fr.upec.episen.tp5_server.ProductServiceOuterClass.GetProductRequest;
-import fr.upec.episen.tp5_server.ProductServiceOuterClass.GetProductResponse;
+import fr.upec.episen.tp6_server.ProductServiceGrpc.ProductServiceBlockingStub;
+import fr.upec.episen.tp6_server.ProductServiceOuterClass.GetProductRequest;
+import fr.upec.episen.tp6_server.ProductServiceOuterClass.GetProductResponse;
+
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
+@EnableDiscoveryClient // Enable Eureka Discovery Client
 public class Tp6ClientApplication implements CommandLineRunner {
 
 	Logger logger = LoggerFactory.getLogger(Tp6ClientApplication.class);
