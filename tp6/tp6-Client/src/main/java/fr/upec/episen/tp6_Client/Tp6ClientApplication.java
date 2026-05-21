@@ -1,4 +1,4 @@
-package fr.upec.episen.tp5_Client;
+package fr.upec.episen.tp6_Client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,15 +12,15 @@ import fr.upec.episen.tp5_server.ProductServiceOuterClass.GetProductRequest;
 import fr.upec.episen.tp5_server.ProductServiceOuterClass.GetProductResponse;
 
 @SpringBootApplication
-public class Tp5ClientApplication implements CommandLineRunner {
+public class Tp6ClientApplication implements CommandLineRunner {
 
-	Logger logger = LoggerFactory.getLogger(Tp5ClientApplication.class);
+	Logger logger = LoggerFactory.getLogger(Tp6ClientApplication.class);
 
 	@Autowired
 	private ProductServiceBlockingStub productServiceStub;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Tp5ClientApplication.class, args);
+		SpringApplication.run(Tp6ClientApplication.class, args);
 	}
 
 	@Override
