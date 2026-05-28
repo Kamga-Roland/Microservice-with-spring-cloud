@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package fr.upec.episen.tp8_server;
+import "google/protobuf/empty.proto";
+
+option java_package = "fr.upec.episen.tp8_server";
+option java_multiple_files = true;
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  double price = 3;
+}
+
+message StockInfo {
+  string productId = 1;
+  int32 quantity = 2;
+}
+
+message GetProductRequest {
+  int32 id = 1;
+}
+
+message GetProductResponse {
+  Product product = 1;
+  StockInfo stock = 2;
+}
+
+message ListProductsRequest {
+  repeated int32 ids = 1;
+}
+
+message ListProductsResponse {
+  repeated GetProductResponse products = 1;
+}
+
+service ProductService {
+  rpc GetProduct (GetProductRequest) returns (GetProductResponse);
+  rpc ListProducts (ListProductsRequest) returns (ListProductsResponse);
+}

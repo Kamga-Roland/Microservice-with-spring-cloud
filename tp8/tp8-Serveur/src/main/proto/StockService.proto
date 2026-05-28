@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package fr.upec.episen.tp8_stock;
+option java_package = "fr.upec.episen.tp8_stock";
+option java_multiple_files = true;
+
+message GetStockRequest {
+  string productId = 1;
+}
+
+message GetStockResponse {
+  string id = 1;
+  string productId = 2;
+  int32 quantity = 3;
+}
+
+service StockService {
+  rpc GetStock (GetStockRequest) returns (GetStockResponse);
+  rpc ListStocks (google.protobuf.Empty) returns (stream GetStockResponse);
+}
