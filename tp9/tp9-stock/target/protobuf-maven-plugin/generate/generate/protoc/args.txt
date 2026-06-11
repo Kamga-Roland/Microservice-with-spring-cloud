@@ -1,0 +1,9 @@
+--java_out=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\generated-sources\protobuf
+--plugin=protoc-gen-d40bbc58ae2ef489ec6fc496a0e1076641665d7e=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\protobuf-maven-plugin\generate\generate\artifacts\protoc-gen-grpc-java-d29e48349ad7b11089ed1bcfe6127a34e50e7b13.exe
+--d40bbc58ae2ef489ec6fc496a0e1076641665d7e_out=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\generated-sources\protobuf
+--d40bbc58ae2ef489ec6fc496a0e1076641665d7e_opt=@generated=omit
+C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\src\main\proto\stock.proto
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\src\main\proto
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\protobuf-maven-plugin\generate\generate\archives\grpc-services-1.77.1-4c63070c9a7a114d65f16ed78fb23935471916d9
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\protobuf-maven-plugin\generate\generate\archives\protobuf-java-4.33.4-9abef2acb9f11ba45eede1f26704b2656b0cf246
+--proto_path=C:\Users\rolan\OneDrive\Documents\Projects\PPCOM\tp9\tp9-stock\target\protobuf-maven-plugin\generate\generate\archives\proto-google-common-protos-2.63.2-7d6d295f244a6795c4eb616778af35d4ce457196
