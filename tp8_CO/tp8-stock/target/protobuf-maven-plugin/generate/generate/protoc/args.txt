@@ -1,0 +1,9 @@
+--java_out=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\generated-sources\protobuf
+--plugin=protoc-gen-989c273ff53dafa2767f9f3faebd90ffeb8dd2ae=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\protobuf-maven-plugin\generate\generate\artifacts\protoc-gen-grpc-java-d29e48349ad7b11089ed1bcfe6127a34e50e7b13.exe
+--989c273ff53dafa2767f9f3faebd90ffeb8dd2ae_out=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\generated-sources\protobuf
+--989c273ff53dafa2767f9f3faebd90ffeb8dd2ae_opt=@generated=omit
+C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\src\main\proto\stock.proto
+--proto_path=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\src\main\proto
+--proto_path=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\protobuf-maven-plugin\generate\generate\archives\grpc-services-1.77.1-ed827ba3215cc3d719526ddddacbaaf5c409e9ef
+--proto_path=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\protobuf-maven-plugin\generate\generate\archives\protobuf-java-4.33.4-18515d2d7a520447cc12094bab515b86e954f579
+--proto_path=C:\Users\Fabrice\Workspaces\WorkspaceIng1\tp8-stock\target\protobuf-maven-plugin\generate\generate\archives\proto-google-common-protos-2.63.2-27625fec910e5971769b4981aa1f984b60cb0c6d

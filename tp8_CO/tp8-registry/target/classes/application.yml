@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: tp8-registry
+
+eureka:
+  instance:
+    # Permet d'afficher l'adresse IP plutôt que le nom d'hôte dans l'interface Eureka
+    prefer-ip-address: true
+  client:
+    # Indique à cette instance de ne pas s'enregistrer elle-même auprès d'Eureka
+    register-with-eureka: false
+    # Indique à cette instance de ne pas aller chercher l'annuaire localement
+    fetch-registry: false
+    service-url:
+      # L'adresse absolue à laquelle vos autres microservices viendront s'enregistrer
+      defaultZone: http://localhost:8761/eureka/
