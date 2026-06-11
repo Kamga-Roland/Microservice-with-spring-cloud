@@ -1,5 +1,38 @@
 services:
 
+  tp9-registry:
+    image: tp9-registry:latest
+    container_name: tp9-registry
+    ports:
+      - "9876:8761"
+    networks:
+      - tp9-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 4s
+      timeout: 3s
+      retries: 5
+    depends_on: []
+
+  tp9-config-server:
+    image: tp9-config-server:latest
+    container_name: tp9-config-server
+    ports:
+      - "8888:8888"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://tp9-registry:8761/eureka/
+    depends_on:
+      tp9-registry:
+        condition: service_healthy
+    networks:
+      - tp9-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8888/actuator/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
   mongodb:
     image: mongo:latest
     container_name: tp9-mongo
@@ -23,3 +56,7 @@ services:
   
 volumes:
   mongo-data:
+
+networks:
+  tp9-network:
+    driver: bridge
