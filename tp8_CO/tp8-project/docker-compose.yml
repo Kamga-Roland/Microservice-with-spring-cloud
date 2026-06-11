@@ -1,0 +1,25 @@
+services:
+
+  mongodb:
+    image: mongo:latest
+    container_name: tp8-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: tp8-mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+    depends_on:
+      - mongodb
+  # login: admin
+  # password: pass
+  
+volumes:
+  mongo-data:
