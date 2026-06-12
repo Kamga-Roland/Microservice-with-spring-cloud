@@ -1,1 +1,2 @@
-This project is built by Roland Kamga.
+Optimised Microservices Architecture with Docker Containerisation and Docker‑Compose Orchestration  
+By Roland K.
