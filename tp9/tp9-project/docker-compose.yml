@@ -33,6 +33,27 @@ services:
       retries: 10
       start_period: 10s
 
+  tp9-server:
+    image: tp9-server:latest
+    container_name: tp9-server
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://tp9-registry:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://tp9-config-server:8888/
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/tp9
+    depends_on:
+      - tp9-config-server
+      - mongodb
+    networks:
+      - tp9-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   mongodb:
     image: mongo:latest
     container_name: tp9-mongo
@@ -40,6 +61,8 @@ services:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+    networks:
+      - tp9-network
 
   mongo-express:
     image: mongo-express:latest
@@ -51,9 +74,9 @@ services:
       - ME_CONFIG_MONGODB_PORT=27017
     depends_on:
       - mongodb
-  # login: admin
-  # password: pass
-  
+    networks:
+      - tp9-network
+
 volumes:
   mongo-data:
 
